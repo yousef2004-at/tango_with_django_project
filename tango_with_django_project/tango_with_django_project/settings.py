@@ -14,8 +14,6 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(__file__)
-print(os.path.dirname(__file__)) print(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -54,12 +52,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'tango_with_django_project.urls'
 
+'DIRS': [TEMPLATE_DIR, ]
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['<workspace>/tango_with_django_project/templates'],
+        'DIRS': [[TEMPLATE_DIR, ]],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
