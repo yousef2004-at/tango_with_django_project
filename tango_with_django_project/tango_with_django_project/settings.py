@@ -16,6 +16,9 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [STATIC_DIR, ]
+<img https://www.google.com/url?sa=i&url=https%3A%2F%2Fkids.nationalgeographic.com%2Fanimals%2Freptiles%2Ffacts%2Fchameleon&psig=AOvVaw19538JAejCMDCN18gV-PzO&ust=1707506980829000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLiaj6q9nIQDFQAAAAAdAAAAABAE/>
+{% load staticfiles %}
+    {% static "<filename>" %}
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
