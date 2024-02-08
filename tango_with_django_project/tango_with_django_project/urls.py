@@ -23,3 +23,9 @@ urlpatterns = [
     # The above maps any URLs starting with rango/ to be handled by rango. 
     path('admin/', admin.site.urls),
 ]
+from django.urls import path 
+from rango import views
+app_name = 'rango'
+urlpatterns = [
+    path('', views.index, name='index'),
+]
